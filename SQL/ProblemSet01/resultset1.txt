@@ -1,0 +1,149 @@
+1.List full details of all hotels
+
+hotel_no  name	         city	      room_no	type	price
+
+H111	Empire Hotel	 New York	313	S	145
+H111	Empire Hotel	 New York	412	N	145
+H193	Devon Hotel	 Boston	       1001	S	150
+H193	Devon Hotel	 Boston	       1201	N	175
+H235	Park Place	 New York       1267	N	175
+H235	Park Place	 New York       1289	N	195
+H432	Brownstone Hotel Toronto        876	S	124
+H432	Brownstone Hotel Toronto	898	S	124
+H437	Clarimont Hotel	 Boston	        223	N	155
+H437	Clarimont Hotel	 Boston	        257	N	140
+H498	James Plaza	 Toronto	345	N	160
+H498	James Plaza	 Toronto	467	N	180
+
+2.List full details of all hotels in New York
+
+hotel_no	name	city	       type   room_no   price
+
+H111	Empire Hotel	New York	S	313	145
+H111	Empire Hotel	New York	N	412	145
+H235	Park Place	New York	N	1267	175
+H235	Park Place	New York	N	1289	195
+
+3.List the names and cities of all guests, ordered according to their cities.
+
+name	         city
+
+Robert Swift	Atlanta
+Edward Cane	Baltimore
+Tara Cummings	Baltimore
+Tom Hancock	Philadelphia
+Adam Wayne	Pittsburgh
+Vanessa Parry	Pittsburgh
+
+4.List all details for non-smoking rooms in ascending order of price.
+
+hotel_no	name	city	 price	room_no
+
+H437	Clarimont Hotel	Boston	 140	257
+H111	Empire Hotel	New York 145	412
+H437	Clarimont Hotel	Boston	 155	223
+H498	James Plaza	Toronto	 160	345
+H235	Park Place	New York 175	1267
+H193	Devon Hotel	Boston	 175	1201
+H498	James Plaza	Toronto	 180	467
+H235	Park Place	New York 195	1289
+
+5.List the number of hotels there are.
+
+
+Number Of Hotels
+
+6
+
+6. List the cities in which guests live. Each city should be listed only once.
+
+city
+
+Baltimore
+Philadelphia
+Pittsburgh
+Atlanta
+
+7.List the average price of a room.
+
+Average Price Of a Room
+
+155.6667
+
+8.List hotel names, their room numbers, and the type of that room.
+
+name	      room_no type
+
+Empire Hotel	 313	S
+Empire Hotel	 412	N
+Devon Hotel	 1001	S
+Devon Hotel	 1201	N
+Park Place	 1267	N
+Park Place	 1289	N
+Brownstone Hotel 876	S
+Brownstone Hotel 898	S
+Clarimont Hotel	 223	N
+Clarimont Hotel	 257	N
+James Plaza	 345	N
+James Plaza	 467	N
+
+9.List the hotel names, booking dates, and room numbers for all hotels in New York.
+
+name		date_from	date_to		room_no
+
+Empire Hotel	10-AUG-99	15-AUG-99	412
+Empire Hotel	18-AUG-99	21-AUG-99	412
+Park Place	05-SEP-99	12-SEP-99	1267
+
+10.What is the number of bookings that started in the month of September?
+
+count(*)
+
+4
+
+11.List the names and cities of guests who began a stay in New York in August.
+
+name	          city
+
+Adam Wayne	Pittsburgh
+Tara Cummings	Baltimore
+
+12.List the hotel names and room numbers of any hotel rooms that have not been booked.
+
+name	      		room_no
+
+Empire Hotel		313
+Park Place		1289
+Brownstone Hotel	876
+Brownstone Hotel	898
+Clarimont Hotel		257
+
+13.List the hotel name and city of the hotel with the highest priced room.
+
+name		city
+
+Park Place	New York
+
+14.List hotel names, room numbers, cities, and prices for hotels that have rooms with prices lower than the lowest priced room in a Boston hotel.
+
+name			city			room_no		price
+
+Brownstone Hotel	Toronto			876		124
+Brownstone Hotel	Toronto		        898		124
+
+15.List the average price of a room grouped by city.
+
+city		avg(price)
+
+Boston		155
+New York	165
+Toronto		147
+
+
+
+
+
+
+
+
+
