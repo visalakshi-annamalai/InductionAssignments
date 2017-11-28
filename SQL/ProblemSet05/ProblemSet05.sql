@@ -38,7 +38,7 @@ from musician m join performer pon m.m_no=p.perf_isgroup by p.instrument) );
 
 
 /*10.List the bands that have played music composed by Sue Little; Give the titles of the composition in each case. (1 point possible)*/
-
+	select * from composer c join musician m on c.comp_no=m.m_no  join has_composed hc on hc.cmpno=c.comp_no join composition c1 on hc.cmpr_no=c.comp_no  where m.m_name='sue little';
 
 /*11.List the name and town of birth of any performer born in the same city as James First.(1 point possible)
 	select m.m_name,p.place_town from musician m join place p on  m.born_in=p.place_no where p.place_town in (select p.place_town from place p join musician m on m.born_in=p.place_no where m.m_name='james first')
@@ -46,11 +46,12 @@ from musician m join performer pon m.m_no=p.perf_isgroup by p.instrument) );
 /*12.Create a list showing for EVERY musician born in Britain the number of compositions and the number of instruments played. (1 point possible)
 
 
-/*13.Give the band name, conductor and contact of the bands performing at the most recent concert in the Royal Albert Hall. (1 point possible)select distinct(b.band_name),c.concert_organiser as conductor,b.band_contact from band b join concert c on c.concert_organiser=b.band_contact where b.band_contact in(select concert_organiser from concert where concert_venue like'royal albert hall' group by concert_organiser having con_date=max(con_date));
-
+/*13.Give the band name, conductor and contact of the bands performing at the most recent concert in the Royal Albert Hall. (1 point possible)
+	select distinct(b.band_name),c.concert_organiser as conductor,b.band_contact from band b join concert c on c.concert_organiser=b.band_contact where b.band_contact in(select concert_organiser from concert where concert_venue like'royal albert hall' group by concert_organiser having con_date=max(con_date));
 
 /*14.Give a list of musicians associated with Glasgow. Include the name of the musician and the nature of the association - one or more of 'LIVES_IN', 'BORN_IN', 'PERFORMED_IN' AND 'IN_BAND_IN'. (1 point possible)
 
+	select * from ((select distinct(m.m_name) ,m.born_in from musician m join place p on p.place_no=m.born_in where place_town='glasgow' )a join (select distinct(m.m_name ),m.living_in from musician m join place p on p.place_no=m.living_in where place_town='glasgow' )b  join ( select band_name as band_in from band b join place p on b.band_home=p.place_no where place_town='glasgow') join (select m.m_name from musician m join performance p on m.m_no=p.performed join place p on p.place_no=p.performed_in where  place_town='glasgow'));
 
 /*15.Jeff Dawn plays in a band with someone who plays in a band with Sue Little. Who is it and what are the bands? (1 point possible)
 
